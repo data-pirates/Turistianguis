@@ -6,6 +6,7 @@ import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import Typewriter from './Component/TypeWriter';
 import { API_KEY } from '../config/key.js';
 import SearchBar from './Component/SearchBar';
+//import Ratings from './Component/Ratings';
 
 const mapStyles = {
 	width: '50%',
@@ -44,10 +45,13 @@ export class MapContainer extends Component {
 				<SearchBar/>
 				<Typewriter />
 				<div id='container'>
-				<CurrentLocation centerAroundCurrentLocation google={this.props.google}>
+			
+
+	<CurrentLocation centerAroundCurrentLocation google={this.props.google}>
 					<Marker onClick={this.onMarkerClick} name={'current location'} />
 					<InfoWindow
-						marker={this.state.activeMaraer}
+					marker={this.state.activeMarker}
+						marker={this.state.activeMarker}
 						visible={this.state.showingInfoWindow}
 						onClose={this.onClose}
 					>
