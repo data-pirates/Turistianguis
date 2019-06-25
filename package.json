@@ -5,9 +5,11 @@
 	"main": "server.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
+
 		"server": "node server.js",
 		"client": "npm run start --prefix client",
 		"dev": "concurrently \"npm run server\" \"npm run client\""
+
 	},
 	"repository": {
 		"type": "git",
@@ -16,21 +18,26 @@
 	"keywords": [
 		"MERN"
 	],
-	"author": "Carlos Franco",
+	"author": "DATA PIRATES",
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/data-pirates/Turistianguis.git"
 	},
 	"homepage": "https://github.com/data-pirates/Turistianguis.git#readme",
 	"dependencies": {
-		"express": "^4.16.4"
+		"cors": "^2.8.5",
+		"express": "^4.16.4",
+		"morgan": "^1.9.1"
 	},
 	"devDependencies": {
+		"babel": "^6.23.0",
 		"babel-cli": "^6.26.0",
 		"babel-core": "^6.26.3",
 		"babel-loader": "^8.0.5",
 		"babel-preset-env": "^1.7.0",
+
 		"concurrently": "^4.1.0",
+
 		"mysql": "^2.17.0",
 		"nodemon": "^1.18.11"
 	}
