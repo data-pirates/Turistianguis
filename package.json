@@ -5,7 +5,9 @@
 	"main": "server.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "nodemon server.js --exec babel-node --presets babel-preset-env"
+		"server": "node server.js",
+		"client": "npm run start --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\""
 	},
 	"repository": {
 		"type": "git",
@@ -28,6 +30,7 @@
 		"babel-core": "^6.26.3",
 		"babel-loader": "^8.0.5",
 		"babel-preset-env": "^1.7.0",
+		"concurrently": "^4.1.0",
 		"mysql": "^2.17.0",
 		"nodemon": "^1.18.11"
 	}
